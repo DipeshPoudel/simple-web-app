@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+{%block head%}
+<title>Student Management System</title>
+{%endblock%}
+
+{%block body%}
+<h1>Student Management System</h1>
+<div class="student_form">
+<form action="/edit/{{student[0]}}" method='POST'>
+    <input type="text" name="student_name" placeholder="Name of Student" required="required" value={{student[1]}}>
+    <input type="date" name="student_dob" id="student_dob" required="required" value="{{student[2]}}">
+    <input type="email" name="student_email" id="student_email" required="required" value="{{student[3]}}">
+    <button type="submit">Submit</button>
+</form>
+</div>
+{%endblock%}
